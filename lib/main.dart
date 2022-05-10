@@ -10,62 +10,65 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.grey[350],
-            title: Row(
-              children: [
-                CircleAvatar(
+        appBar: AppBar(
+          backgroundColor: Colors.grey[350],
+          title: Row(
+            children: [
+              GestureDetector(
+                onDoubleTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    new SnackBar(
+                      content: Text("Image clicked"),
+                    ),
+                  );
+                },
+                child: CircleAvatar(
                   backgroundImage: AssetImage('assets/shimu.jpeg'),
                 ),
-                SizedBox(
-                  width: 5,
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Liakot Fashion',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                      ),
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Liakot Fashion',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
                     ),
-                    Text(
-                      "Remain: 0",
-                      style: TextStyle(
-                        color: Colors.green,
-                        fontSize: 15,
-                      ),
+                  ),
+                  Text(
+                    "Remain: 0",
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontSize: 15,
                     ),
-                  ],
-                ),
-                //------------for set align------------
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Container(
-                      child: Icon(
-                        Icons.search,
-                        color: Colors.black,
-                      ),
+                  ),
+                ],
+              ),
+              //------------for set align------------
+              Expanded(
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: Container(
+                    child: Icon(
+                      Icons.search,
+                      color: Colors.black,
                     ),
                   ),
                 ),
-              ],
-            ),
-          ),
-          body: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 5,
-                width: 5,
               ),
-              Text("This is body"),
             ],
-          )),
+          ),
+        ),
+        body: Container(
+          alignment: Alignment.center,
+          child: Text("This is body"),
+        ),
+      ),
     );
   }
 }
