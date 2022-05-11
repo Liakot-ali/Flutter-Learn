@@ -15,6 +15,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   List<String> customers = ['Liakot', 'Jannat', 'Sonu', 'Umar'];
   List<String> address = ["Bangladesh", "Rangpur", "Nepal", "Nizeria"];
+  var clicked = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -80,10 +81,16 @@ class _MyAppState extends State<MyApp> {
               Container(
                 margin: EdgeInsets.all(5),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      customers.add("Shimu");
+                      clicked++;
+                    });
+                  },
                   child: Text("Add"),
                 ),
               ),
+              Text("You have clicked " + clicked.toString() + " times"),
               Column(
                 children: customers
                     .map((elemnt) => ListTile(
@@ -91,7 +98,7 @@ class _MyAppState extends State<MyApp> {
                           subtitle: Text("This is subtitle"),
                         ))
                     .toList(),
-              ),
+              )
             ],
           )),
     );
