@@ -4,7 +4,18 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _MyAppState();
+  }
+}
+
+class _MyAppState extends State<MyApp> {
+  List<String> customers = ['Liakot', 'Jannat', 'Sonu', 'Umar'];
+  List<String> address = ["Bangladesh", "Rangpur", "Nepal", "Nizeria"];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -66,15 +77,20 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: [
-              SizedBox(height: 5,),
-              TextButton(
-                onPressed: () {},
-                child: Text("Add"),
-              ),
-              SizedBox(height: 5,),
               Container(
-                alignment: Alignment.center,
-                child: Text("This is body"),
+                margin: EdgeInsets.all(5),
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text("Add"),
+                ),
+              ),
+              Column(
+                children: customers
+                    .map((elemnt) => ListTile(
+                          title: Text(elemnt),
+                          subtitle: Text("This is subtitle"),
+                        ))
+                    .toList(),
               ),
             ],
           )),
