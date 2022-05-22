@@ -11,15 +11,18 @@ class Customers extends StatelessWidget {
     return Column(
       children: [
         Text("You have clicked " + clicked.toString() + " times"),
-        Column(
-          children: customers
-              .map((elemnt) => ListTile(
-                    title: Text(elemnt),
+        Expanded(
+          child: ListView.builder(
+            itemCount: customers.length,
+            itemBuilder: (context, index) {
+               return ListTile(
+                    title: Text(customers[index]),
                     subtitle: Text("This is subtitle"),
-                  ))
-              .toList(),
-        )
-      ],
+                    onTap: (){},
+                  );
+            },), 
+          )
+      ]
     );
   }
 }
