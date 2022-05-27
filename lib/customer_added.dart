@@ -30,7 +30,7 @@ class _CustomerAdderState extends State<CustomerAdder> {
           child: Text("Add"),
         ),
       ),
-      Customers(customers, clicked)
+      Expanded(child: Customers(customers, clicked),),
     ]);
   }
 }
