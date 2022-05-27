@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class Customers extends StatelessWidget {
   final List<String> customers;
+  final List<String> address;
   var clicked;
+  int counter = 1;
 
-  Customers(this.customers, this.clicked);
+  Customers(this.customers, this.address, this.clicked);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,9 @@ class Customers extends StatelessWidget {
             itemBuilder: (context, index) {
                return ListTile(
                     title: Text(customers[index]),
-                    subtitle: Text("This is subtitle"),
+                    subtitle: Text(address[index]),
+                    leading: Text(clicked.toString()),
+                    trailing: Text(counter.toString()),
                     onTap: (){
                       
                     },

@@ -24,13 +24,14 @@ class _CustomerAdderState extends State<CustomerAdder> {
           onPressed: () {
             setState(() {
               customers.add("Shimu");
+              address.add("Bangladesh");
               clicked++;
             });
           },
           child: Text("Add"),
         ),
       ),
-      Expanded(child: Customers(customers, clicked),),
+      Expanded(child: Customers(customers, address, clicked),),
     ]);
   }
 }
