@@ -16,24 +16,25 @@ class MyApp extends StatelessWidget {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-              backgroundColor: Colors.grey[350],
-              title: Container(
-                child: appBar(),
-              ),
-              bottom: TabBar(
-                labelColor: Colors.green,
-                unselectedLabelColor: Colors.black,
-                tabs: [
-                  Tab(
-                    text: "Customer",
-                    icon: Icon(Icons.arrow_upward),
-                  ),
-                  Tab(
-                    text: "Payble",
-                    icon: Icon(Icons.arrow_downward),
-                  )
-                ],
-              )),
+            backgroundColor: Colors.grey[350],
+            title: Container(
+              child: appBar(),
+            ),
+            bottom: TabBar(
+              labelColor: Colors.green,
+              unselectedLabelColor: Colors.black,
+              tabs: [
+                Tab(
+                  text: "Customer",
+                  icon: Icon(Icons.arrow_downward, color: Colors.green,),
+                ),
+                Tab(
+                  text: "Payble",
+                  icon: Icon(Icons.arrow_upward, color: Colors.red,),
+                )
+              ],
+            ),
+          ),
           body: TabBarView(
             children: [
               Expanded(
