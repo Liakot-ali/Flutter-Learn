@@ -20,7 +20,7 @@ class _CustomerAdderState extends State<CustomerAdder> {
     return Column(children: [
       Container(
         margin: EdgeInsets.all(5),
-        child: TextButton(
+        child: FloatingActionButton(
           onPressed: () {
             setState(() {
               customers.add("Shimu");
