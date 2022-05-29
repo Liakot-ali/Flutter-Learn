@@ -1,6 +1,6 @@
 import 'package:easy_transaction/customers.dart';
 import 'package:flutter/material.dart';
-import 'customer_added.dart';
+import 'customer_adder.dart';
 import 'app_bar.dart';
 
 void main() {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
               unselectedLabelColor: Colors.black,
               tabs: [
                 Tab(
-                  text: "Customer",
+                  text: "Customers",
                   icon: Icon(Icons.arrow_downward, color: Colors.green,),
                 ),
                 Tab(
