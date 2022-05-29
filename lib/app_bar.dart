@@ -8,11 +8,8 @@ class appBar extends StatelessWidget {
       children: [
         GestureDetector(
           onDoubleTap: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              new SnackBar(
-                content: Text("Image clicked"),
-              ),
-            );
+            Scaffold.of(context)
+                .showSnackBar(new SnackBar(content: new Text("Image clicked")));
           },
           child: CircleAvatar(
             backgroundImage: AssetImage('assets/shimu.jpeg'),

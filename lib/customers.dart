@@ -24,7 +24,7 @@ class Customers extends StatelessWidget {
               trailing: Text(counter.toString()),
               onTap: () {
                 Scaffold.of(context).showSnackBar(
-                    new SnackBar(content: new Text("This is list Item")));
+                    new SnackBar(content: Text("This is list Item")));
               },
             );
           },
