@@ -7,7 +7,7 @@ class appBar extends StatelessWidget {
     return Row(
       children: [
         GestureDetector(
-          onDoubleTap: () {
+          onTap: () {
             Scaffold.of(context)
                 .showSnackBar(new SnackBar(content: new Text("Image clicked")));
           },
@@ -43,10 +43,14 @@ class appBar extends StatelessWidget {
           child: Align(
             alignment: Alignment.centerRight,
             child: Container(
-              child: Icon(
+              child: GestureDetector(
+                onTap: (){
+                  Scaffold.of(context).showSnackBar(new SnackBar(content: new Text("Search icon clicked")));
+                },
+                child: Icon(
                 Icons.search,
                 color: Colors.black,
-              ),
+              ),)
             ),
           ),
         ),
