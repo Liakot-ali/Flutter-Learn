@@ -1,3 +1,4 @@
+import 'package:easy_transaction/shop_profile.dart';
 import 'package:flutter/material.dart';
 import 'main.dart';
 
@@ -8,8 +9,7 @@ class appBar extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            Scaffold.of(context)
-                .showSnackBar(new SnackBar(content: new Text("Image clicked")));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => ShopProfile()));
           },
           child: CircleAvatar(
             backgroundImage: AssetImage('assets/shimu.jpeg'),

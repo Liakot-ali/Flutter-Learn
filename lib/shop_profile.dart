@@ -11,19 +11,17 @@ class ShopProfile extends StatefulWidget {
 class _ShopProfileState extends State<ShopProfile> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
-          title: Container(
-            child: appBar(),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.grey,
+        title: Container(
+          child: appBar(),
         ),
-        body: Column(
-          children: [
-            Text("data"),
-          ],
-        ),
+      ),
+      body: Column(
+        children: [
+          Text("data"),
+        ],
       ),
     );
   }
