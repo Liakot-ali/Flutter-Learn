@@ -13,16 +13,14 @@ class _ShopProfileState extends State<ShopProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.grey[350],
         title: Container(
           child: appBar(),
         ),
       ),
-      body: Column(
-        children: [
-          Text("data"),
-        ],
-      ),
+      body: Center(
+        child: Text("This is user profile.\n Add user details here"),
+      )
     );
   }
 }
