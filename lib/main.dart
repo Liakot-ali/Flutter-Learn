@@ -1,4 +1,5 @@
 import 'package:easy_transaction/customers.dart';
+import 'package:easy_transaction/shop_profile.dart';
 import 'package:flutter/material.dart';
 import 'customer_adder.dart';
 import 'app_bar.dart';
