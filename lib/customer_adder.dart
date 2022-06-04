@@ -10,8 +10,8 @@ class CustomerAdder extends StatefulWidget {
 }
 
 class _CustomerAdderState extends State<CustomerAdder> {
-  List<String> customers = ['Liakot', 'Jannat', 'Sonu', 'Umar'];
-  List<String> address = ["Bangladesh", "Rangpur", "Nepal", "Nizeria"];
+  List<String> customers = ['Liakot', 'Jannat', 'Sonu', 'Umar', 'Shuvo', 'Rajul'];
+  List<String> address = ["Bangladesh", "Rangpur", "Nepal", "Nizeria", "Japan", 'bangladesh'];
   var clicked = 0;
 
   @override
