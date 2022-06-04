@@ -12,15 +12,18 @@ class _ShopProfileState extends State<ShopProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey[350],
-        title: Container(
-          child: appBar(),
+        appBar: AppBar(
+          backgroundColor: Colors.grey[350],
+          title: Container(
+            child: appBar(),
+          ),
         ),
-      ),
-      body: Center(
-        child: Text("This is user profile.\n Add user details here"),
-      )
-    );
+        body: Center(
+          child: Text(
+            "This is user profile.\nAdd user details here",
+            style: TextStyle(color: Colors.black),
+            maxLines: 1,
+          ),
+        ));
   }
 }

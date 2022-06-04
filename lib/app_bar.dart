@@ -9,7 +9,8 @@ class appBar extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => ShopProfile()));
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => ShopProfile()));
           },
           child: CircleAvatar(
             backgroundImage: AssetImage('assets/shimu.jpeg'),
@@ -44,13 +45,15 @@ class appBar extends StatelessWidget {
             alignment: Alignment.centerRight,
             child: Container(
               child: GestureDetector(
-                onTap: (){
-                  Scaffold.of(context).showSnackBar(new SnackBar(content: new Text("Search icon clicked")));
+                onTap: () {
+                  Scaffold.of(context).showSnackBar(
+                      new SnackBar(content: new Text("Search icon clicked")));
                 },
                 child: Icon(
-                Icons.search,
-                color: Colors.black,
-              ),)
+                  Icons.search,
+                  color: Colors.black,
+                ),
+              ),
             ),
           ),
         ),
@@ -58,6 +61,3 @@ class appBar extends StatelessWidget {
     );
   }
 }
-
-
-
