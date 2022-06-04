@@ -28,10 +28,16 @@ class _CustomerAdderState extends State<CustomerAdder> {
               clicked++;
             });
           },
-          child: Text("Add"),
+          child: Text(
+            "Add",
+            style: TextStyle(color: Colors.black),
+            maxLines: 1,
+          ),
         ),
       ),
-      Expanded(child: Customers(customers, address, clicked),),
+      Expanded(
+        child: Customers(customers, address, clicked),
+      ),
     ]);
   }
 }
