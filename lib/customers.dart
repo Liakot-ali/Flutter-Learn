@@ -24,7 +24,8 @@ class Customers extends StatelessWidget {
               leading: Text(clicked.toString()),
               trailing: Text(counter.toString()),
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => CustomerDetails()));
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => 
+                  CustomerDetails(value: new Value(customers[index], address[index], "Nothing")),),);
               },
             );
           },
@@ -32,4 +33,11 @@ class Customers extends StatelessWidget {
       )
     ]);
   }
+}
+
+
+class Value{
+  final String name, address, picture;
+
+  Value(this.name, this.address, this.picture);
 }
