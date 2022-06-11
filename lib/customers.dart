@@ -1,3 +1,4 @@
+import 'package:easy_transaction/customer_details.dart';
 import 'package:flutter/material.dart';
 
 class Customers extends StatelessWidget {
@@ -23,8 +24,7 @@ class Customers extends StatelessWidget {
               leading: Text(clicked.toString()),
               trailing: Text(counter.toString()),
               onTap: () {
-                Scaffold.of(context).showSnackBar(
-                    new SnackBar(content: Text("This is list Item")));
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => CustomerDetails()));
               },
             );
           },
