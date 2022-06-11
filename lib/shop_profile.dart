@@ -15,7 +15,7 @@ class _ShopProfileState extends State<ShopProfile> {
         appBar: AppBar(
           backgroundColor: Colors.grey[350],
           title: Container(
-            child: appBar(),
+            child: appBar("Liakot Fashion", "Remain: 0", "nothing"),
           ),
         ),
         body: Center(

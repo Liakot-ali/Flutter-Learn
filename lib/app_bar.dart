@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 
 class appBar extends StatelessWidget {
+  final name, address, picture;
+  appBar(this.name, this.address, this.picture);
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -24,14 +27,14 @@ class appBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Liakot Fashion',
+              name,
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 20,
               ),
             ),
             Text(
-              "Remain: 0",
+              address,
               style: TextStyle(
                 color: Colors.green,
                 fontSize: 15,
