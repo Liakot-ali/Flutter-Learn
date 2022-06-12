@@ -16,7 +16,7 @@ class appBar extends StatelessWidget {
                 .push(MaterialPageRoute(builder: (context) => ShopProfile()));
           },
           child: CircleAvatar(
-            backgroundImage: AssetImage('assets/shimu.jpeg'),
+            backgroundImage: AssetImage(picture),
           ),
         ),
         SizedBox(

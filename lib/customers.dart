@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 class Customers extends StatelessWidget {
   final List<String> customers;
   final List<String> address;
+  final List<String> picture;
   var clicked;
   int counter = 1;
 
-  Customers(this.customers, this.address, this.clicked);
+  Customers(this.customers, this.address, this.clicked, this.picture);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class Customers extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) {
                     return CustomerDetails(
-                      value: Value(customers[index], address[index], "Nothing"),
+                      value: Value(customers[index], address[index], picture[index]),
                     );
                   }),
                 );
