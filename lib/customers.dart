@@ -25,11 +25,11 @@ class Customers extends StatelessWidget {
               trailing: Text(counter.toString()),
               onTap: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => CustomerDetails(
+                  MaterialPageRoute(builder: (context) {
+                    return CustomerDetails(
                       value: Value(customers[index], address[index], "Nothing"),
-                    ),
-                  ),
+                    );
+                  }),
                 );
               },
             );

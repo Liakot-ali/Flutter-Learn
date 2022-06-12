@@ -60,6 +60,29 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/shimu.jpeg
+    - assets/shimu1.jpeg
+    - assets/shimu2.jpeg
+    - assets/shimu3.jpeg
+    - assets/shimu4.jpeg
+    - assets/shimu5.jpeg
+    - assets/shimu6.jpeg
+    - assets/shimu7.jpeg
+    - assets/shimu8.jpeg
+    - assets/shimu9.jpeg
+    - assets/shimu10.jpeg
+    - assets/shimu11.jpeg
+    - assets/shimu12.jpeg
+    - assets/shimu13.jpeg
+    - assets/shimu14.jpeg
+    - assets/shimu15.jpeg
+    - assets/shimu16.jpeg
+    - assets/shimu17.jpeg
+
+    - assets/liakot1.jpeg
+    - assets/liakot2.jpeg
+    - assets/liakot3.jpeg
+    - assets/liakot4.jpeg
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
