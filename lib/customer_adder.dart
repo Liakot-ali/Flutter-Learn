@@ -12,7 +12,7 @@ class CustomerAdder extends StatefulWidget {
 class _CustomerAdderState extends State<CustomerAdder> {
   List<String> customers = ['Liakot', 'Jannat', 'Sonu', 'Umar', 'Shuvo', 'Rajul'];
   List<String> address = ["Bangladesh", "Rangpur", "Nepal", "Nizeria", "Japan", 'bangladesh'];
-  List<String> picture = ["assets/shimu1.jepg","assets/shimu2.jepg","assets/shimu3.jepg","assets/shimu4.jepg","assets/shimu5.jepg","assets/shimu6.jepg"];
+  List<String> picture = ["assets/shimu1.jpeg","assets/shimu2.jpeg","assets/shimu3.jpeg","assets/shimu4.jpeg","assets/shimu5.jpeg","assets/shimu6.jpeg"];
   var clicked = 7;
 
   @override

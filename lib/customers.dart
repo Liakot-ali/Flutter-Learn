@@ -22,13 +22,16 @@ class Customers extends StatelessWidget {
             return ListTile(
               title: Text(customers[index]),
               subtitle: Text(address[index]),
-              leading: Text(clicked.toString()),
-              trailing: Text(counter.toString()),
+              trailing: Text(clicked.toString()),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(picture[index]),
+              ),
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) {
                     return CustomerDetails(
-                      value: Value(customers[index], address[index], picture[index]),
+                      value: Value(
+                          customers[index], address[index], picture[index]),
                     );
                   }),
                 );
