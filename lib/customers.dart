@@ -36,6 +36,13 @@ class Customers extends StatelessWidget {
                   }),
                 );
               },
+              onLongPress: () {
+                Scaffold.of(context).showSnackBar(new SnackBar(
+                  behavior: SnackBarBehavior.floating,
+                  content: Text("Under Construction"),
+                  margin: EdgeInsets.only(bottom: 10.0),
+                ));
+              },
             );
           },
         ),
