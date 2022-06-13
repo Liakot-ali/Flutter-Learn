@@ -33,6 +33,30 @@ class _ShopProfileState extends State<ShopProfile> {
                 "Liakot Fashion",
                 style: TextStyle(color: Colors.black, fontSize: 17.0),
               ),
+              Text(
+                "Owner Name",
+                style: TextStyle(color: Colors.grey, fontSize: 10.0),
+              ),
+              Text(
+                "Liakot Ali Liton",
+                style: TextStyle(color: Colors.black, fontSize: 17.0),
+              ),
+              Text(
+                "Category",
+                style: TextStyle(color: Colors.grey, fontSize: 10.0),
+              ),
+              Text(
+                "Ladies Fashion",
+                style: TextStyle(color: Colors.black, fontSize: 17.0),
+              ),
+              Text(
+                "Address",
+                style: TextStyle(color: Colors.grey, fontSize: 10.0),
+              ),
+              Text(
+                "Tajnagor, Parbatipur, Dinajpur",
+                style: TextStyle(color: Colors.black, fontSize: 17.0),
+              ),
             ],
           ),
       ),
