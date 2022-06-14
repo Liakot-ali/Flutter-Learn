@@ -3,9 +3,8 @@ import 'package:easy_transaction/customers.dart';
 import 'package:flutter/material.dart';
 
 class CustomerDetails extends StatefulWidget {
-  
   final Value value;
-   CustomerDetails({Key? key, required this.value}) : super(key: key);
+  CustomerDetails({Key? key, required this.value}) : super(key: key);
 
   @override
   State<CustomerDetails> createState() {
@@ -26,7 +25,16 @@ class _StateCustomerDetails extends State<CustomerDetails> {
           child: appBar(value.name, value.address, value.picture),
         ),
       ),
-      body: Center(child: Text("Customer details body"),),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Customer Name:", style: TextStyle(fontSize: 10.0),),
+            Text(value.name, style: TextStyle(fontSize: 17.0),),
+            
+          ],
+        ),
+      ),
     );
   }
 }
