@@ -31,7 +31,12 @@ class _StateCustomerDetails extends State<CustomerDetails> {
           children: [
             Text("Customer Name:", style: TextStyle(fontSize: 10.0),),
             Text(value.name, style: TextStyle(fontSize: 17.0),),
+            SizedBox(height: 5.0,),
+            Text("Customer Address:", style: TextStyle(fontSize: 10.0),),
+            Text(value.address, style: TextStyle(fontSize: 17.0),),
+            SizedBox(height: 5.0,),
             
+
           ],
         ),
       ),
