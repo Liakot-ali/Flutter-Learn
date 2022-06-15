@@ -27,9 +27,7 @@ class _StateCustomerDetails extends State<CustomerDetails> {
       ),
       body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            
             Text(
               "Customer Name:",
               style: TextStyle(fontSize: 10.0),
@@ -56,9 +54,9 @@ class _StateCustomerDetails extends State<CustomerDetails> {
               "Customer Phone:",
               style: TextStyle(fontSize: 10.0),
             ),
-            Text(
-              "Phone Number",
-              style: TextStyle(fontSize: 17.0),
+            TextFormField(
+              initialValue: "User Phone Number",
+              maxLength: 10,
             ),
             SizedBox(
               height: 5.0,
