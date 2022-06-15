@@ -27,17 +27,42 @@ class _StateCustomerDetails extends State<CustomerDetails> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Customer Name:", style: TextStyle(fontSize: 10.0),),
-            Text(value.name, style: TextStyle(fontSize: 17.0),),
-            SizedBox(height: 5.0,),
-            Text("Customer Address:", style: TextStyle(fontSize: 10.0),),
-            Text(value.address, style: TextStyle(fontSize: 17.0),),
-            SizedBox(height: 5.0,),
-            Text("Customer Phone:", style: TextStyle(fontSize: 10.0),),
-            Text("Phone Number", style: TextStyle(fontSize: 17.0),),
-            SizedBox(height: 5.0,),
+            
+            Text(
+              "Customer Name:",
+              style: TextStyle(fontSize: 10.0),
+            ),
+            TextFormField(
+              initialValue: value.name,
+              maxLength: 10,
+            ),
+            SizedBox(
+              height: 5.0,
+            ),
+            Text(
+              "Customer Address:",
+              style: TextStyle(fontSize: 10.0),
+            ),
+            TextFormField(
+              initialValue: value.address,
+              maxLength: 10,
+            ),
+            SizedBox(
+              height: 5.0,
+            ),
+            Text(
+              "Customer Phone:",
+              style: TextStyle(fontSize: 10.0),
+            ),
+            Text(
+              "Phone Number",
+              style: TextStyle(fontSize: 17.0),
+            ),
+            SizedBox(
+              height: 5.0,
+            ),
           ],
         ),
       ),
