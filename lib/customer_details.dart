@@ -59,9 +59,6 @@ class _StateCustomerDetails extends State<CustomerDetails> {
             initialValue: "User Phone Number",
             maxLength: 10,
           ),
-          SizedBox(
-            height: 5.0,
-          ),
         ],
       ),
     );
