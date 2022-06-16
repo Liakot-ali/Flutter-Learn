@@ -47,6 +47,7 @@ class _StateCustomerDetails extends State<CustomerDetails> {
           TextFormField(
             initialValue: value.address,
             maxLength: 10,
+            cursorHeight: 17.0,
           ),
           SizedBox(
             height: 5.0,
@@ -58,6 +59,7 @@ class _StateCustomerDetails extends State<CustomerDetails> {
           TextFormField(
             initialValue: "User Phone Number",
             maxLength: 10,
+            cursorHeight: 17.0,
           ),
         ],
       ),
