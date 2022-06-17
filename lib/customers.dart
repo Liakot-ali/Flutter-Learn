@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 class Customers extends StatelessWidget {
   final List<String> customers;
   final List<String> address;
+  final List<int> remain;
   final List<String> picture;
   var clicked;
   int counter = 1;
 
-  Customers(this.customers, this.address, this.clicked, this.picture);
+  Customers(this.customers, this.address, this.remain, this.picture);
 
   @override
   Widget build(BuildContext context) {
