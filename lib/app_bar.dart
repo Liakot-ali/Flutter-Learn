@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 
 class appBar extends StatelessWidget {
-  final name, address, picture;
-  appBar(this.name, this.address, this.picture);
+  final name, address, picture, remain;
+  appBar(this.name, this.address, this.picture, this.remain);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class appBar extends StatelessWidget {
               ),
             ),
             Text(
-              address,
+              remain,
               style: TextStyle(
                 color: Colors.green,
                 fontSize: 15,

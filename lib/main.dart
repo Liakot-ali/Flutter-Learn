@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.grey[350],
             title: Container(
-              child: appBar("Liakot Fashion", "Remain: 0", "assets/shimu.jpeg"),
+              child: appBar("Liakot Fashion", "Tajnagor, Parbatipur, Dinajpur", "assets/shimu.jpeg", "Total Remain: 1502"),
             ),
             bottom: TabBar(
               labelColor: Colors.green,

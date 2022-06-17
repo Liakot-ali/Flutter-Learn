@@ -22,7 +22,7 @@ class _StateCustomerDetails extends State<CustomerDetails> {
       appBar: AppBar(
         backgroundColor: Colors.grey[350],
         title: Container(
-          child: appBar(value.name, value.address, value.picture),
+          child: appBar(value.name, value.address, value.picture, "Remain: "+ value.remain.toString()),
         ),
       ),
       body: Column(
