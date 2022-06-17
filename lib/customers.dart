@@ -23,7 +23,7 @@ class Customers extends StatelessWidget {
             return ListTile(
               title: Text(customers[index]),
               subtitle: Text(address[index]),
-              trailing: Text(clicked.toString()),
+              trailing: Text("Remain: " + remain[index].toString()),
               leading: CircleAvatar(
                 backgroundImage: AssetImage(picture[index]),
               ),
@@ -32,7 +32,7 @@ class Customers extends StatelessWidget {
                   MaterialPageRoute(builder: (context) {
                     return CustomerDetails(
                       value: Value(
-                          customers[index], address[index], picture[index]),
+                          customers[index], address[index], picture[index], remain[index]),
                     );
                   }),
                 );
@@ -54,6 +54,7 @@ class Customers extends StatelessWidget {
 
 class Value {
   final String name, address, picture;
+  final int remain;
 
-  Value(this.name, this.address, this.picture);
+  Value(this.name, this.address, this.picture, this.remain);
 }

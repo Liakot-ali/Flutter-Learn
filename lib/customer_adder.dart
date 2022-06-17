@@ -10,9 +10,31 @@ class CustomerAdder extends StatefulWidget {
 }
 
 class _CustomerAdderState extends State<CustomerAdder> {
-  List<String> customers = ['Liakot', 'Jannat', 'Sonu', 'Umar', 'Shuvo', 'Rajul'];
-  List<String> address = ["Bangladesh", "Rangpur", "Nepal", "Nizeria", "Japan", 'bangladesh'];
-  List<String> picture = ["assets/shimu1.jpeg","assets/shimu2.jpeg","assets/shimu3.jpeg","assets/shimu4.jpeg","assets/shimu5.jpeg","assets/shimu6.jpeg"];
+  List<String> customers = [
+    'Liakot',
+    'Jannat',
+    'Sonu',
+    'Umar',
+    'Shuvo',
+    'Rajul'
+  ];
+  List<String> address = [
+    "Bangladesh",
+    "Rangpur",
+    "Nepal",
+    "Nizeria",
+    "Japan",
+    'bangladesh'
+  ];
+  List<int> remain = [10, 50, 100, 15, 525, 220];
+  List<String> picture = [
+    "assets/shimu1.jpeg",
+    "assets/shimu2.jpeg",
+    "assets/shimu3.jpeg",
+    "assets/shimu4.jpeg",
+    "assets/shimu5.jpeg",
+    "assets/shimu6.jpeg"
+  ];
   var clicked = 7;
 
   @override
@@ -26,7 +48,8 @@ class _CustomerAdderState extends State<CustomerAdder> {
             setState(() {
               customers.add("Shimu" + clicked.toString());
               address.add("Bangladesh");
-              picture.add("assets/shimu" + clicked.toString() +".jpeg");
+              picture.add("assets/shimu" + clicked.toString() + ".jpeg");
+              remain.add(clicked.toInt());
               clicked++;
             });
           },
@@ -38,7 +61,7 @@ class _CustomerAdderState extends State<CustomerAdder> {
         ),
       ),
       Expanded(
-        child: Customers(customers, address, clicked, picture),
+        child: Customers(customers, address, remain, picture),
       ),
     ]);
   }
