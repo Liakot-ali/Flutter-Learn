@@ -1,3 +1,4 @@
+import 'package:easy_transaction/add_customer.dart';
 import 'package:flutter/material.dart';
 import './customers.dart';
 
@@ -45,13 +46,7 @@ class _CustomerAdderState extends State<CustomerAdder> {
         margin: EdgeInsets.all(5),
         child: FloatingActionButton(
           onPressed: () {
-            setState(() {
-              customers.add("Shimu" + clicked.toString());
-              address.add("Bangladesh");
-              picture.add("assets/shimu" + clicked.toString() + ".jpeg");
-              remain.add(clicked.toInt());
-              clicked++;
-            });
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => addCustomer()));
           },
           child: Text(
             "Add",
