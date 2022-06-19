@@ -23,9 +23,15 @@ class addCustomer extends StatelessWidget {
               ),
             ),
             TextFormField(
-              initialValue: "Customer Type",
               maxLength: 20,
               cursorHeight: 17.0,
+              keyboardType: TextInputType.name,
+              decoration: InputDecoration(
+                helperText: "",
+                labelStyle: TextStyle(fontSize: 15.0),
+                labelText: "Type",
+                hintText: "Customer Type",
+              ),
             ),
             TextFormField(
               initialValue: "Customer Phone",
