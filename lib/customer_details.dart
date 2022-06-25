@@ -16,51 +16,47 @@ class CustomerDetails extends StatefulWidget {
 class _StateCustomerDetails extends State<CustomerDetails> {
   final Value value;
   _StateCustomerDetails(this.value);
+
+  Widget _Text(String text) {
+    return Text(
+      text,
+      style: TextStyle(fontSize: 15.0),
+    );
+  }
+
+  Widget _TextFormField(String text) {
+    return TextFormField(
+      initialValue: text,
+      maxLength: 10,
+      cursorHeight: 17.0,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey[350],
         title: Container(
-          child: appBar(value.name, value.address, value.picture, "Remain: "+ value.remain.toString()),
+          child: appBar(value.name, value.address, value.picture,
+              "Remain: " + value.remain.toString()),
         ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Customer Name:",
-            style: TextStyle(fontSize: 15.0),
-          ),
-          TextFormField(
-            initialValue: value.name,
-            maxLength: 10,
-            cursorHeight: 17.0,
-          ),
+          _Text("Customer Name:"),
+          _TextFormField(value.name),
           SizedBox(
             height: 5.0,
           ),
-          Text(
-            "Customer Address:",
-            style: TextStyle(fontSize: 15.0),
-          ),
-          TextFormField(
-            initialValue: value.address,
-            maxLength: 10,
-            cursorHeight: 17.0,
-          ),
+          _Text("Customer Address:"),
+          _TextFormField(value.address),
           SizedBox(
             height: 5.0,
           ),
-          Text(
-            "Customer Phone:",
-            style: TextStyle(fontSize: 15.0),
-          ),
-          TextFormField(
-            initialValue: "User Phone Number",
-            maxLength: 10,
-            cursorHeight: 17.0,
-          ),
+          _Text("Customer Phone:"),
+          _TextFormField("User Phone Number"),
         ],
       ),
     );
