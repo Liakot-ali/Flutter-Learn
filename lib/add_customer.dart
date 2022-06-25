@@ -2,6 +2,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class addCustomer extends StatelessWidget {
+
+  Widget _Input(String hint, String label) {
+     return TextFormField(
+      maxLength: 50,
+      cursorHeight: 17.0,
+      keyboardType: TextInputType.name,
+      decoration: InputDecoration(
+        helperText: "",
+        labelStyle: TextStyle(fontSize: 15.0),
+        labelText: label,
+        hintText: hint,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,51 +26,14 @@ class addCustomer extends StatelessWidget {
       body: Form(
         child: Column(
           children: [
-            TextFormField(
-              maxLength: 25,
-              cursorHeight: 17.0,
-              keyboardType: TextInputType.name,
-              decoration: InputDecoration(
-                helperText: "",
-                labelStyle: TextStyle(fontSize: 15.0),
-                labelText: "Name",
-                hintText: "Customer Name",
-              ),
+            _Input("Name", "Customer Name"),
+            _Input("Phone", "Customer Phone"),
+            _Input("Type", "Customer Type"),
+            _Input("Address", "Customer Address"),
+            TextButton(
+              onPressed: () {},
+              child: Text("Submit"),
             ),
-            TextFormField(
-              maxLength: 20,
-              cursorHeight: 17.0,
-              keyboardType: TextInputType.name,
-              decoration: InputDecoration(
-                helperText: "",
-                labelStyle: TextStyle(fontSize: 15.0),
-                labelText: "Type",
-                hintText: "Customer Type",
-              ),
-            ),
-            TextFormField(
-              maxLength: 11,
-              cursorHeight: 17.0,
-              keyboardType: TextInputType.name,
-              decoration: InputDecoration(
-                helperText: "",
-                labelStyle: TextStyle(fontSize: 15.0),
-                labelText: "Phone",
-                hintText: "Customer Phone",
-              ),
-            ),
-            TextFormField(
-              maxLength: 50,
-              cursorHeight: 17.0,
-              keyboardType: TextInputType.name,
-              decoration: InputDecoration(
-                helperText: "",
-                labelStyle: TextStyle(fontSize: 15.0),
-                labelText: "Address",
-                hintText: "Customer Address",
-              ),
-            ),
-            TextButton(onPressed: (){}, child: Text("Submit"),),
           ],
         ),
       ),
