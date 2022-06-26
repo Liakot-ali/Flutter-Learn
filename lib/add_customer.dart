@@ -31,7 +31,9 @@ class addCustomer extends StatelessWidget {
             _Input("Type", "Customer Type"),
             _Input("Address", "Customer Address"),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: Text("Under Construction")));
+              },
               child: Text("Submit"),
             ),
           ],
