@@ -2,9 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class addCustomer extends StatelessWidget {
-
   Widget _Input(String hint, String label) {
-     return TextFormField(
+    return TextFormField(
       maxLength: 50,
       cursorHeight: 17.0,
       keyboardType: TextInputType.name,
@@ -32,7 +31,13 @@ class addCustomer extends StatelessWidget {
             _Input("Address", "Customer Address"),
             TextButton(
               onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: Text("Under Construction"), behavior: SnackBarBehavior.floating, margin: EdgeInsets.only(bottom: 10.0),));
+                ScaffoldMessenger.of(context).showSnackBar(
+                  new SnackBar(
+                    content: Text("Under Construction"),
+                    behavior: SnackBarBehavior.floating,
+                    margin: EdgeInsets.only(bottom: 10.0),
+                  ),
+                );
               },
               child: Text("Submit"),
             ),
