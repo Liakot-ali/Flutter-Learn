@@ -26,6 +26,12 @@ class _StateCustomerDetails extends State<CustomerDetails> {
 
   Widget _TextFormField(String text) {
     return TextFormField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+        ),
+        label: Text("Label"),
+      ),
       initialValue: text,
       maxLength: 10,
       cursorHeight: 17.0,
@@ -45,17 +51,14 @@ class _StateCustomerDetails extends State<CustomerDetails> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _Text("Customer Name:"),
           _TextFormField(value.name),
           SizedBox(
             height: 5.0,
           ),
-          _Text("Customer Address:"),
           _TextFormField(value.address),
           SizedBox(
             height: 5.0,
           ),
-          _Text("Customer Phone:"),
           _TextFormField("User Phone Number"),
         ],
       ),
