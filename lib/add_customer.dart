@@ -8,8 +8,15 @@ class addCustomer extends StatelessWidget {
       cursorHeight: 17.0,
       keyboardType: TextInputType.name,
       decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        ),
+        contentPadding: EdgeInsets.all(5),
         helperText: "",
-        labelStyle: TextStyle(fontSize: 15.0),
+        labelStyle: TextStyle(
+          fontSize: 15.0,
+          decorationStyle: TextDecorationStyle.dotted,
+        ),
         labelText: label,
         hintText: hint,
       ),
@@ -23,25 +30,34 @@ class addCustomer extends StatelessWidget {
         title: Text("Add Customer"),
       ),
       body: Form(
-        child: Column(
-          children: [
-            _Input("Name", "Customer Name"),
-            _Input("Phone", "Customer Phone"),
-            _Input("Type", "Customer Type"),
-            _Input("Address", "Customer Address"),
-            TextButton(
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  new SnackBar(
-                    content: Text("Under Construction"),
-                    behavior: SnackBarBehavior.floating,
-                    margin: EdgeInsets.only(bottom: 10.0),
-                  ),
-                );
-              },
-              child: Text("Submit"),
-            ),
-          ],
+        child: Container(
+          margin: EdgeInsets.all(10),
+          child: ListView(
+            children: [
+              SizedBox(
+                height: 10.0,
+              ),
+              _Input("Name", "Name"),
+              _Input("Phone", "Phone"),
+              _Input("Type", "Type"),
+              _Input("Address", "Address"),
+              TextButton(
+                onPressed: () {
+                  String str = "Liakot's Wife/Bangladesh/0";
+                  Navigator.pop(context, str);
+
+                  // ScaffoldMessenger.of(context).showSnackBar(
+                  //   new SnackBar(
+                  //     content: Text("Under Construction"),
+                  //     behavior: SnackBarBehavior.floating,
+                  //     margin: EdgeInsets.only(bottom: 10.0),
+                  //   ),
+                  // );
+                },
+                child: Text("Submit"),
+              ),
+            ],
+          ),
         ),
       ),
     );
