@@ -5,7 +5,6 @@ import './customers.dart';
 class CustomerAdder extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _CustomerAdderState();
   }
 }
@@ -46,7 +45,23 @@ class _CustomerAdderState extends State<CustomerAdder> {
         margin: EdgeInsets.all(5),
         child: FloatingActionButton(
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => addCustomer()));
+            clicked++;
+            Navigator.push<String>(
+              context,
+              MaterialPageRoute(
+                builder: (BuildContext context) => addCustomer(),
+              ),
+            ).then((value) {
+              setState(() {
+                if (value != null) {
+                  List<String> str = value.split("/");
+                  customers.add(str[0]);
+                  address.add(str[1]);
+                  remain.add(int.parse(str[2]));
+                  picture.add("assets/shimu" + clicked.toString() + ".jpeg");
+                }
+              });
+            });
           },
           child: Text(
             "Add",
