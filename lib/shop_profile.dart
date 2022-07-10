@@ -21,7 +21,6 @@ class _ShopProfileState extends State<ShopProfile> {
       style: TextStyle(color: color, fontSize: size),
     );
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
