@@ -55,9 +55,13 @@ class _CustomerAdderState extends State<CustomerAdder> {
               setState(() {
                 if (value != null) {
                   List<String> str = value.split("/");
+                  print("0" + str[0]);
+                  print("1" + str[1]);
+                  print("2" + str[2]);
+                  print("3" + str[3]);
                   customers.add(str[0]);
-                  address.add(str[1]);
-                  remain.add(int.parse(str[2]));
+                  address.add(str[2]);
+                  remain.add(int.parse(str[3]));
                   picture.add("assets/shimu" + clicked.toString() + ".jpeg");
                 }
               });
