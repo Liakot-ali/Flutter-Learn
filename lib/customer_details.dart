@@ -31,6 +31,7 @@ class _StateCustomerDetails extends State<CustomerDetails> {
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
         label: Text("Label"),
+        contentPadding: EdgeInsets.all(5),
       ),
       initialValue: text,
       maxLength: 10,
