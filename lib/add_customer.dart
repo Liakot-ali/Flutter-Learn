@@ -29,36 +29,36 @@ class addCustomer extends StatelessWidget {
       appBar: AppBar(
         title: Text("Add Customer"),
       ),
-      body: Form(
+      body: Center(
         child: Container(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(10.0),
           child: ListView(
-            children: [
-              SizedBox(
-                height: 10.0,
-              ),
-              _Input("Name", "Name"),
-              _Input("Phone", "Phone"),
-              _Input("Type", "Type"),
-              _Input("Address", "Address"),
-              TextButton(
-                onPressed: () {
-                  String str = "Liakot's Wife/Bangladesh/0";
-                  Navigator.pop(context, str);
+          children: [
+            SizedBox(
+              height: 10.0,
+            ),
+            _Input("Example", "Name"),
+            _Input("1234567890", "Phone"),
+            _Input("Customer", "Type"),
+            _Input("10/2, Dhanmondi, Dhaka-1200", "Address"),
+            TextButton(
+              onPressed: () {
+                String str = "Liakot's Wife/Bangladesh/0";
+                Navigator.pop(context, str);
 
-                  // ScaffoldMessenger.of(context).showSnackBar(
-                  //   new SnackBar(
-                  //     content: Text("Under Construction"),
-                  //     behavior: SnackBarBehavior.floating,
-                  //     margin: EdgeInsets.only(bottom: 10.0),
-                  //   ),
-                  // );
-                },
-                child: Text("Submit"),
-              ),
-            ],
-          ),
+                // ScaffoldMessenger.of(context).showSnackBar(
+                //   new SnackBar(
+                //     content: Text("Under Construction"),
+                //     behavior: SnackBarBehavior.floating,
+                //     margin: EdgeInsets.only(bottom: 10.0),
+                //   ),
+                // );
+              },
+              child: Text("Submit"),
+            ),
+          ],
         ),
+      ),
       ),
     );
   }
