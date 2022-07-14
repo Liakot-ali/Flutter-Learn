@@ -15,6 +15,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         accentColor: Colors.green,
         buttonColor: Colors.blue,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.lightBlue,
+          foregroundColor: Colors.white,
+        ),
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
             backgroundColor:
@@ -24,8 +28,8 @@ class MyApp extends StatelessWidget {
           ),
         ),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
-            backgroundColor: Colors.green,
-            foregroundColor: Colors.white,
+          backgroundColor: Colors.green,
+          foregroundColor: Colors.white,
         ),
       ),
       // routes: {
