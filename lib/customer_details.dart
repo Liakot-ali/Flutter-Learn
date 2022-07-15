@@ -24,13 +24,13 @@ class _StateCustomerDetails extends State<CustomerDetails> {
     );
   }
 
-  Widget _TextFormField(String text) {
+  Widget _TextFormField(String label, String text) {
     return TextFormField(
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
-        label: Text("Label"),
+        label: Text(label),
         contentPadding: EdgeInsets.all(5),
       ),
       initialValue: text,
@@ -43,7 +43,6 @@ class _StateCustomerDetails extends State<CustomerDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey[350],
         title: Container(
           child: appBar(value.name, value.address, value.picture,
               "Remain: " + value.remain.toString()),
@@ -52,15 +51,18 @@ class _StateCustomerDetails extends State<CustomerDetails> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _TextFormField(value.name),
+           SizedBox(
+            height: 10.0,
+          ),
+          _TextFormField("Name", value.name),
           SizedBox(
             height: 5.0,
           ),
-          _TextFormField(value.address),
+          _TextFormField("Address" , value.address),
           SizedBox(
             height: 5.0,
           ),
-          _TextFormField("User Phone Number"),
+          _TextFormField("Phone", "Phone Number"),
         ],
       ),
     );
