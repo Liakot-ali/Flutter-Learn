@@ -10,20 +10,19 @@ class HomePage extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.grey[350],
           title: Container(
             child: appBar("Liakot Fashion", "Tajnagor, Parbatipur, Dinajpur",
                 "assets/shimu.jpeg", "Total Remain: 1502"),
           ),
           bottom: TabBar(
-            labelColor: Colors.green,
+            labelColor: Colors.white,
             unselectedLabelColor: Colors.black,
             tabs: <Widget>[
               Tab(
                 text: "Customers",
                 icon: Icon(
                   Icons.arrow_downward,
-                  color: Colors.green,
+                  color: Colors.white,
                 ),
               ),
               Tab(

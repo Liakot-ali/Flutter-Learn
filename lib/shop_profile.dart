@@ -25,7 +25,6 @@ class _ShopProfileState extends State<ShopProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey[350],
         title: Container(
           child: appBar("Liakot Fashion", "Tajnagor, Parbatipur, Dinajpur",
               "assets/shimu.jpeg", "Total Remain: 1502"),
