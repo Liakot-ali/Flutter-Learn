@@ -36,7 +36,7 @@ class appBar extends StatelessWidget {
             Text(
               remain,
               style: TextStyle(
-                color: Colors.green,
+                color: Colors.white,
                 fontSize: 15,
               ),
             ),
@@ -50,7 +50,12 @@ class appBar extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   Scaffold.of(context).showSnackBar(
-                      new SnackBar(content: new Text("Search icon clicked"), behavior: SnackBarBehavior.floating, margin: EdgeInsets.only(bottom: 10.0),));
+                    new SnackBar(
+                      content: new Text("Search icon clicked"),
+                      behavior: SnackBarBehavior.floating,
+                      margin: EdgeInsets.only(bottom: 10.0),
+                    ),
+                  );
                 },
                 child: Icon(
                   Icons.search,
