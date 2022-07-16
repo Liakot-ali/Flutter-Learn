@@ -55,7 +55,7 @@ class _StateCustomerDetails extends State<CustomerDetails> {
           SizedBox(
             height: 5.0,
           ),
-          _TextFormField("Phone", "Phone Number"),
+          _TextFormField("Phone", value.phone),
         ],
       ),
     );

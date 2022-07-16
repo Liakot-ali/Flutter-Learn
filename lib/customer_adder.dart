@@ -35,6 +35,7 @@ class _CustomerAdderState extends State<CustomerAdder> {
     "assets/shimu5.jpeg",
     "assets/shimu6.jpeg"
   ];
+  List<String> phone = ["", "", "", "","", ""];
   var clicked = 7;
 
   @override
@@ -60,6 +61,7 @@ class _CustomerAdderState extends State<CustomerAdder> {
                   print("2" + str[2]);
                   print("3" + str[3]);
                   customers.add(str[0]);
+                  phone.add(str[1]);
                   address.add(str[2]);
                   remain.add(int.parse(str[3]));
                   picture.add("assets/shimu" + clicked.toString() + ".jpeg");
@@ -75,7 +77,7 @@ class _CustomerAdderState extends State<CustomerAdder> {
         ),
       ),
       Expanded(
-        child: Customers(customers, address, remain, picture),
+        child: Customers(customers, address, remain, picture, phone),
       ),
     ]);
   }

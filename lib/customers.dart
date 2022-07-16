@@ -6,10 +6,11 @@ class Customers extends StatelessWidget {
   final List<String> address;
   final List<int> remain;
   final List<String> picture;
+  final List<String> phone;
   var clicked;
   int counter = 1;
 
-  Customers(this.customers, this.address, this.remain, this.picture);
+  Customers(this.customers, this.address, this.remain, this.picture, this.phone);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class Customers extends StatelessWidget {
                   MaterialPageRoute(builder: (context) {
                     return CustomerDetails(
                       value: Value(
-                          customers[index], address[index], picture[index], remain[index]),
+                          customers[index], address[index], picture[index], remain[index], phone[index]),
                     );
                   }),
                 );
@@ -53,8 +54,8 @@ class Customers extends StatelessWidget {
 }
 
 class Value {
-  final String name, address, picture;
+  final String name, address, picture, phone;
   final int remain;
 
-  Value(this.name, this.address, this.picture, this.remain);
+  Value(this.name, this.address, this.picture, this.remain, this.phone);
 }
