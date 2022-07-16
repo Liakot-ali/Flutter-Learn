@@ -54,7 +54,29 @@ class addCustomer extends StatelessWidget {
                 height: 10.0,
               ),
               _Input("Example", "Name"),
-              _Input("1234567890", "Phone"),
+              TextFormField(
+                maxLength: 50,
+                cursorHeight: 17.0,
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                  ),
+                  contentPadding: EdgeInsets.all(5),
+                  helperText: "",
+                  labelStyle: TextStyle(
+                    fontSize: 15.0,
+                    decorationStyle: TextDecorationStyle.dotted,
+                  ),
+                  labelText: "Phone",
+                  hintText: "1234567890",
+                ),
+                onChanged: (String value) {
+                  if (value.isNotEmpty) {
+                    phone = value;
+                  }
+                },
+              ),
               _Input("Customer", "Type"),
               _Input("10/2, Dhanmondi, Dhaka-1200", "Address"),
               TextButton(
