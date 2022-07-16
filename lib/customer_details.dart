@@ -17,13 +17,6 @@ class _StateCustomerDetails extends State<CustomerDetails> {
   final Value value;
   _StateCustomerDetails(this.value);
 
-  Widget _Text(String text) {
-    return Text(
-      text,
-      style: TextStyle(fontSize: 15.0),
-    );
-  }
-
   Widget _TextFormField(String label, String text) {
     return TextFormField(
       decoration: InputDecoration(
