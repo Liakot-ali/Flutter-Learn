@@ -49,7 +49,7 @@ class appBar extends StatelessWidget {
             child: Container(
               child: GestureDetector(
                 onTap: () {
-                  Scaffold.of(context).showSnackBar(
+                  ScaffoldMessenger.of(context).showSnackBar(
                     new SnackBar(
                       content: new Text("Search icon clicked"),
                       behavior: SnackBarBehavior.floating,
