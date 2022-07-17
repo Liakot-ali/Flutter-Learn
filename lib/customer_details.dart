@@ -44,18 +44,30 @@ class _StateCustomerDetails extends State<CustomerDetails> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-           SizedBox(
+          SizedBox(
             height: 10.0,
           ),
           _TextFormField("Name", value.name),
           SizedBox(
             height: 5.0,
           ),
-          _TextFormField("Address" , value.address),
+          _TextFormField("Address", value.address),
           SizedBox(
             height: 5.0,
           ),
           _TextFormField("Phone", value.phone),
+          TextButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                new SnackBar(
+                  content: Text("Under Construction"),
+                  behavior: SnackBarBehavior.floating,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+              );
+            },
+            child: Text("Update"),
+          ),
         ],
       ),
     );
