@@ -3,40 +3,19 @@ import 'package:flutter/material.dart';
 import './customers.dart';
 
 class CustomerAdder extends StatefulWidget {
+  List<String> customers, phone, address, picture;
+  List<int> remain;
+  CustomerAdder(this.customers, this.address, this.phone, this.picture, this.remain);
   @override
   State<StatefulWidget> createState() {
-    return _CustomerAdderState();
+    return _CustomerAdderState(customers, address, phone, picture, remain);
   }
 }
 
 class _CustomerAdderState extends State<CustomerAdder> {
-  List<String> customers = [
-    'Liakot',
-    'Jannat',
-    'Sonu',
-    'Umar',
-    'Shuvo',
-    'Rajul'
-  ];
-  List<String> address = [
-    "Bangladesh",
-    "Rangpur",
-    "Nepal",
-    "Nizeria",
-    "Japan",
-    'bangladesh'
-  ];
-  List<int> remain = [10, 50, 100, 15, 525, 220];
-  List<String> picture = [
-    "assets/shimu1.jpeg",
-    "assets/shimu2.jpeg",
-    "assets/shimu3.jpeg",
-    "assets/shimu4.jpeg",
-    "assets/shimu5.jpeg",
-    "assets/shimu6.jpeg"
-  ];
-  List<String> phone = ["", "", "", "","", ""];
-  var clicked = 7;
+  List<String> customers, phone, address, picture;
+  List<int> remain;
+  _CustomerAdderState(this.customers, this.address, this.phone, this.picture, this.remain);
 
   @override
   Widget build(BuildContext context) {
