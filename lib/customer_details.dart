@@ -42,7 +42,7 @@ class _StateCustomerDetails extends State<CustomerDetails> {
         ),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
             height: 10.0,
@@ -56,17 +56,23 @@ class _StateCustomerDetails extends State<CustomerDetails> {
             height: 5.0,
           ),
           _TextFormField("Phone", value.phone),
-          TextButton(
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                new SnackBar(
-                  content: Text("Under Construction"),
-                  behavior: SnackBarBehavior.floating,
-                  margin: EdgeInsets.only(bottom: 10),
-                ),
-              );
-            },
-            child: Text("Update"),
+          Container(
+            padding: EdgeInsets.all(5.0),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey, width: 1.0),
+            ),
+            child: TextButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  new SnackBar(
+                    content: Text("Under Construction"),
+                    behavior: SnackBarBehavior.floating,
+                    margin: EdgeInsets.only(bottom: 10),
+                  ),
+                );
+              },
+              child: Text("Update"),
+            ),
           ),
         ],
       ),

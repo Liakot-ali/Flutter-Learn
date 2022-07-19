@@ -54,19 +54,20 @@ List<String> customers = [
           bottom: TabBar(
             labelColor: Colors.white,
             unselectedLabelColor: Colors.black,
+            indicatorColor: Colors.white,
             tabs: <Widget>[
               Tab(
                 text: "Customers",
                 icon: Icon(
                   Icons.arrow_downward,
-                  color: Colors.white,
+                  color: Colors.green[200],
                 ),
               ),
               Tab(
                 text: "Payble",
                 icon: Icon(
                   Icons.arrow_upward,
-                  color: Colors.red,
+                  color: Colors.red[400],
                 ),
               )
             ],
