@@ -42,29 +42,6 @@ class appBar extends StatelessWidget {
             ),
           ],
         ),
-        //------------for set align------------
-        Expanded(
-          child: Align(
-            alignment: Alignment.centerRight,
-            child: Container(
-              child: GestureDetector(
-                onTap: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    new SnackBar(
-                      content: new Text("Search icon clicked"),
-                      behavior: SnackBarBehavior.floating,
-                      margin: EdgeInsets.only(bottom: 10.0),
-                    ),
-                  );
-                },
-                child: Icon(
-                  Icons.search,
-                  color: Colors.black,
-                ),
-              ),
-            ),
-          ),
-        ),
       ],
     );
   }

@@ -10,7 +10,8 @@ class Customers extends StatelessWidget {
   var clicked;
   int counter = 1;
 
-  Customers(this.customers, this.address, this.remain, this.picture, this.phone);
+  Customers(
+      this.customers, this.address, this.remain, this.picture, this.phone);
 
   @override
   Widget build(BuildContext context) {
@@ -32,18 +33,20 @@ class Customers extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) {
                     return CustomerDetails(
-                      value: Value(
-                          customers[index], address[index], picture[index], remain[index], phone[index]),
+                      value: Value(customers[index], address[index],
+                          picture[index], remain[index], phone[index]),
                     );
                   }),
                 );
               },
               onLongPress: () {
-                Scaffold.of(context).showSnackBar(new SnackBar(
-                  behavior: SnackBarBehavior.floating,
-                  content: Text("Under Construction"),
-                  margin: EdgeInsets.only(bottom: 10.0),
-                ));
+                ScaffoldMessenger.of(context).showSnackBar(
+                  new SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    content: Text("Under Construction"),
+                    margin: EdgeInsets.only(bottom: 10.0),
+                  ),
+                );
               },
             );
           },

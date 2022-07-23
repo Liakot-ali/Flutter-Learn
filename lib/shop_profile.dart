@@ -21,6 +21,7 @@ class _ShopProfileState extends State<ShopProfile> {
       style: TextStyle(color: color, fontSize: size),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +30,20 @@ class _ShopProfileState extends State<ShopProfile> {
           child: appBar("Liakot Fashion", "Tajnagor, Parbatipur, Dinajpur",
               "assets/shimu.jpeg", "Total Remain: 1502"),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                new SnackBar(
+                  content: new Text("Search icon clicked"),
+                  behavior: SnackBarBehavior.floating,
+                  margin: EdgeInsets.only(bottom: 10.0),
+                ),
+              );
+            },
+            icon: Icon(Icons.search),
+          ),
+        ],
       ),
       body: Center(
         child: Column(

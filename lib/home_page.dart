@@ -1,4 +1,5 @@
 import 'package:easy_transaction/add_customer.dart';
+import 'package:easy_transaction/widgets/search_icon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'customer_adder.dart';
@@ -12,8 +13,8 @@ class HomePage extends StatefulWidget {
   }
 }
 
-class _HomePageState extends State<HomePage>{
-List<String> customers = [
+class _HomePageState extends State<HomePage> {
+  List<String> customers = [
     'Liakot',
     'Jannat',
     'Sonu',
@@ -38,7 +39,7 @@ List<String> customers = [
     "assets/shimu5.jpeg",
     "assets/shimu6.jpeg"
   ];
-  List<String> phone = ["", "", "", "","", ""];
+  List<String> phone = ["", "", "", "", "", ""];
   var clicked = 7;
 
   @override
@@ -51,6 +52,9 @@ List<String> customers = [
             child: appBar("Liakot Fashion", "Tajnagor, Parbatipur, Dinajpur",
                 "assets/shimu.jpeg", "Total Remain: 1502"),
           ),
+          actions: [
+            searchIcon(),
+          ],
           bottom: TabBar(
             labelColor: Colors.white,
             unselectedLabelColor: Colors.black,
@@ -80,6 +84,7 @@ List<String> customers = [
           ],
         ),
         floatingActionButton: FloatingActionButton(
+          foregroundColor: Colors.white,
           onPressed: () {
             clicked++;
             Navigator.push<String>(
@@ -104,11 +109,7 @@ List<String> customers = [
               });
             });
           },
-          child: Text(
-            "Add",
-            style: TextStyle(color: Colors.black),
-            maxLines: 1,
-          ),
+          child: Text("Add"),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       ),
