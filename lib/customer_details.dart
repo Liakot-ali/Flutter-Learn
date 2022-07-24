@@ -41,7 +41,9 @@ class _StateCustomerDetails extends State<CustomerDetails> {
               "Remain: " + value.remain.toString()),
         ),
       ),
-      body: Column(
+      body: Container(
+        margin: EdgeInsets.all(10.0),
+        child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
@@ -75,7 +77,7 @@ class _StateCustomerDetails extends State<CustomerDetails> {
             ),
           ),
         ],
-      ),
+      ),),
     );
   }
 }
