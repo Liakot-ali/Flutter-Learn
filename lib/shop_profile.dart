@@ -1,4 +1,5 @@
 import 'package:easy_transaction/app_bar.dart';
+import 'package:easy_transaction/widgets/search_icon.dart';
 import 'package:flutter/material.dart';
 
 class ShopProfile extends StatefulWidget {
@@ -31,18 +32,7 @@ class _ShopProfileState extends State<ShopProfile> {
               "assets/shimu.jpeg", "Total Remain: 1502"),
         ),
         actions: [
-          IconButton(
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                new SnackBar(
-                  content: new Text("Search icon clicked"),
-                  behavior: SnackBarBehavior.floating,
-                  margin: EdgeInsets.only(bottom: 10.0),
-                ),
-              );
-            },
-            icon: Icon(Icons.search),
-          ),
+          searchIcon(),
         ],
       ),
       body: Center(

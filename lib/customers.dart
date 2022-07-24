@@ -11,7 +11,7 @@ class Customers extends StatelessWidget {
   int counter = 1;
 
   Customers(
-      this.customers, this.address, this.remain, this.picture, this.phone);
+      this.customers, this.address, this.phone, this.picture, this.remain);
 
   @override
   Widget build(BuildContext context) {
