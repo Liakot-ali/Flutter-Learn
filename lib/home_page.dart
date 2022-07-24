@@ -1,4 +1,5 @@
 import 'package:easy_transaction/add_customer.dart';
+import 'package:easy_transaction/customers.dart';
 import 'package:easy_transaction/widgets/search_icon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,39 +9,33 @@ import 'app_bar.dart';
 class HomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _HomePageState();
   }
 }
 
 class _HomePageState extends State<HomePage> {
-  List<String> customers = [
-    'Liakot',
-    'Jannat',
-    'Sonu',
-    'Umar',
-    'Shuvo',
-    'Rajul'
-  ];
-  List<String> address = [
-    "Bangladesh",
-    "Rangpur",
-    "Nepal",
-    "Nizeria",
-    "Japan",
-    'bangladesh'
-  ];
-  List<int> remain = [10, 50, 100, 15, 525, 220];
-  List<String> picture = [
-    "assets/shimu1.jpeg",
-    "assets/shimu2.jpeg",
-    "assets/shimu3.jpeg",
-    "assets/shimu4.jpeg",
-    "assets/shimu5.jpeg",
-    "assets/shimu6.jpeg"
-  ];
-  List<String> phone = ["", "", "", "", "", ""];
-  var clicked = 7;
+  List<String> customers = [];
+  List<String> address = [];
+  List<int> remain =[];
+  List<String> picture = [];
+  List<String> phone = [];
+  var clicked = 0;
+
+  Widget showCustomer() {
+    return customers.isNotEmpty
+        ? TabBarView(
+            children: [
+              Customers(customers, address, phone, picture, remain),
+              Customers(customers, address, phone, picture, remain),
+            ],
+          )
+        : TabBarView(
+            children: [
+              Center(child: Text("No Customers")),
+              Center(child: Text("No Payble")),
+            ],
+          );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,16 +72,10 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        body: TabBarView(
-          children: [
-            CustomerAdder(customers, address, phone, picture, remain),
-            CustomerAdder(customers, address, phone, picture, remain),
-          ],
-        ),
+        body: showCustomer(),
         floatingActionButton: FloatingActionButton(
           foregroundColor: Colors.white,
           onPressed: () {
-            clicked++;
             Navigator.push<String>(
               context,
               MaterialPageRoute(
@@ -95,11 +84,12 @@ class _HomePageState extends State<HomePage> {
             ).then((value) {
               setState(() {
                 if (value != null) {
+                  clicked++;
                   List<String> str = value.split("/");
-                  print("0" + str[0]);
-                  print("1" + str[1]);
-                  print("2" + str[2]);
-                  print("3" + str[3]);
+                  print("0 = " + str[0]);
+                  print("1 = " + str[1]);
+                  print("2 = " + str[2]);
+                  print("3 = " + str[3]);
                   customers.add(str[0]);
                   phone.add(str[1]);
                   address.add(str[2]);
