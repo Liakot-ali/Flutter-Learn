@@ -3,7 +3,6 @@ import 'package:easy_transaction/customers.dart';
 import 'package:easy_transaction/widgets/search_icon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'customer_adder.dart';
 import 'app_bar.dart';
 
 class HomePage extends StatefulWidget {
