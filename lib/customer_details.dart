@@ -17,20 +17,49 @@ class _StateCustomerDetails extends State<CustomerDetails> {
   final Value value;
   _StateCustomerDetails(this.value);
 
-  Widget _TextFormField(String label, String text) {
+  Widget _nameTextField() {
     return TextFormField(
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
-        label: Text(label),
+        label: Text("Name"),
         contentPadding: EdgeInsets.all(5),
       ),
-      initialValue: text,
-      maxLength: 10,
+      initialValue: value.name,
+      maxLength: 15,
       cursorHeight: 17.0,
     );
   }
+  Widget _addressTextField() {
+    return TextFormField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+        ),
+        label: Text("Address"),
+        contentPadding: EdgeInsets.all(5),
+      ),
+      initialValue: value.address,
+      maxLength: 25,
+      cursorHeight: 17.0,
+    );
+  }
+  Widget _phoneTextField() {
+    return TextFormField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+        ),
+        label: Text("Phone"),
+        contentPadding: EdgeInsets.all(5),
+      ),
+      initialValue: value.phone,
+      maxLength: 11,
+      cursorHeight: 17.0,
+    );
+  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -49,15 +78,15 @@ class _StateCustomerDetails extends State<CustomerDetails> {
           SizedBox(
             height: 10.0,
           ),
-          _TextFormField("Name", value.name),
+          _nameTextField(),
           SizedBox(
             height: 5.0,
           ),
-          _TextFormField("Address", value.address),
+          _addressTextField(),
           SizedBox(
             height: 5.0,
           ),
-          _TextFormField("Phone", value.phone),
+          _phoneTextField(),
           Container(
             padding: EdgeInsets.all(5.0),
             decoration: BoxDecoration(
