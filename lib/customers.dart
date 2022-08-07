@@ -10,8 +10,7 @@ class Customers extends StatelessWidget {
   var clicked;
   int counter = 1;
 
-  Customers(
-      this.customers, this.address, this.phone, this.picture, this.remain);
+  Customers(this.customers, this.address, this.phone, this.picture, this.remain);
 
   @override
   Widget build(BuildContext context) {
