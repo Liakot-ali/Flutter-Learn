@@ -5,9 +5,85 @@ class addCustomer extends StatelessWidget {
   String name = "";
   String phone = "", type = "", address = "";
 
-  Widget _Input(String hint, String label) {
+  Widget _phoneTextField() {
     return TextFormField(
-      maxLength: 50,
+      maxLength: 11,
+      cursorHeight: 17.0,
+      keyboardType: TextInputType.number,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        ),
+        contentPadding: EdgeInsets.all(5),
+        helperText: "",
+        labelStyle: TextStyle(
+          fontSize: 15.0,
+          decorationStyle: TextDecorationStyle.dotted,
+        ),
+        labelText: "Phone",
+        hintText: "1234567890",
+      ),
+      onChanged: (String value) {
+        if (value.isNotEmpty) {
+          phone = value;
+        }
+      },
+    );
+  }
+  Widget _nameTextField() {
+    return TextFormField(
+      maxLength: 25,
+      cursorHeight: 17.0,
+      keyboardType: TextInputType.number,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        ),
+        contentPadding: EdgeInsets.all(5),
+        helperText: "",
+        labelStyle: TextStyle(
+          fontSize: 15.0,
+          decorationStyle: TextDecorationStyle.dotted,
+        ),
+        labelText: "Name",
+        hintText: "Example",
+      ),
+      onChanged: (String value) {
+        if (value.isNotEmpty) {
+          phone = value;
+        }
+      },
+    );
+  }
+  Widget _addressTextField() {
+    return TextFormField(
+      maxLength: 35,
+      cursorHeight: 17.0,
+      keyboardType: TextInputType.number,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        ),
+        contentPadding: EdgeInsets.all(5),
+        helperText: "",
+        labelStyle: TextStyle(
+          fontSize: 15.0,
+          decorationStyle: TextDecorationStyle.dotted,
+        ),
+        labelText: "Address",
+        hintText: "11/A Green city, Dhaka-1120",
+      ),
+      onChanged: (String value) {
+        if (value.isNotEmpty) {
+          phone = value;
+        }
+      },
+    );
+  }
+
+  Widget _typeTextField() {
+    return TextFormField(
+      maxLength: 10,
       cursorHeight: 17.0,
       keyboardType: TextInputType.name,
       decoration: InputDecoration(
@@ -20,20 +96,12 @@ class addCustomer extends StatelessWidget {
           fontSize: 15.0,
           decorationStyle: TextDecorationStyle.dotted,
         ),
-        labelText: label,
-        hintText: hint,
+        labelText: "Type",
+        hintText: "Customer",
       ),
       onChanged: (String value) {
         if (value.isNotEmpty) {
-          if (label.toLowerCase() == "name") {
-            name = value;
-          } else if (label.toLowerCase() == "phone") {
-            phone = value;
-          } else if (label.toLowerCase() == "type") {
-            type = value;
-          } else if (label.toLowerCase() == "address") {
-            address = value;
-          }
+          type = value;
         }
       },
     );
@@ -53,32 +121,10 @@ class addCustomer extends StatelessWidget {
               SizedBox(
                 height: 10.0,
               ),
-              _Input("Example", "Name"),
-              TextFormField(
-                maxLength: 50,
-                cursorHeight: 17.0,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                  ),
-                  contentPadding: EdgeInsets.all(5),
-                  helperText: "",
-                  labelStyle: TextStyle(
-                    fontSize: 15.0,
-                    decorationStyle: TextDecorationStyle.dotted,
-                  ),
-                  labelText: "Phone",
-                  hintText: "1234567890",
-                ),
-                onChanged: (String value) {
-                  if (value.isNotEmpty) {
-                    phone = value;
-                  }
-                },
-              ),
-              _Input("Customer", "Type"),
-              _Input("10/2, Dhanmondi, Dhaka-1200", "Address"),
+              _nameTextField(),
+              _phoneTextField(),
+              _addressTextField(),
+              _typeTextField(),
               TextButton(
                 onPressed: () {
                   String str = name + "/" + phone + "/" + address + "/0";
