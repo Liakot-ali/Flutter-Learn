@@ -21,7 +21,7 @@ class addCustomer extends StatelessWidget {
           decorationStyle: TextDecorationStyle.dotted,
         ),
         labelText: "Phone",
-        hintText: "1234567890",
+        hintText: "0123456789",
       ),
       onChanged: (String value) {
         if (value.isNotEmpty) {
