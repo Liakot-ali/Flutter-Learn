@@ -30,6 +30,7 @@ class addCustomer extends StatelessWidget {
       },
     );
   }
+
   Widget _nameTextField() {
     return TextFormField(
       maxLength: 25,
@@ -55,6 +56,7 @@ class addCustomer extends StatelessWidget {
       },
     );
   }
+
   Widget _addressTextField() {
     return TextFormField(
       maxLength: 35,
@@ -116,33 +118,35 @@ class addCustomer extends StatelessWidget {
       body: Center(
         child: Container(
           margin: EdgeInsets.all(10.0),
-          child: ListView(
-            children: [
-              SizedBox(
-                height: 10.0,
-              ),
-              _nameTextField(),
-              _phoneTextField(),
-              _addressTextField(),
-              _typeTextField(),
-              TextButton(
-                onPressed: () {
-                  String str = name + "/" + phone + "/" + address + "/0";
-                  if (str == "///0") {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      new SnackBar(
-                        content: Text("No Input is given"),
-                        behavior: SnackBarBehavior.floating,
-                        margin: EdgeInsets.only(bottom: 10.0),
-                      ),
-                    );
-                  } else {
-                    Navigator.pop(context, str);
-                  }
-                },
-                child: Text("Submit"),
-              ),
-            ],
+          child: Form(
+            child: ListView(
+              children: [
+                SizedBox(
+                  height: 10.0,
+                ),
+                _nameTextField(),
+                _phoneTextField(),
+                _addressTextField(),
+                _typeTextField(),
+                TextButton(
+                  onPressed: () {
+                    String str = name + "/" + phone + "/" + address + "/0";
+                    if (str == "///0") {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        new SnackBar(
+                          content: Text("No Input is given"),
+                          behavior: SnackBarBehavior.floating,
+                          margin: EdgeInsets.only(bottom: 10.0),
+                        ),
+                      );
+                    } else {
+                      Navigator.pop(context, str);
+                    }
+                  },
+                  child: Text("Submit"),
+                ),
+              ],
+            ),
           ),
         ),
       ),
