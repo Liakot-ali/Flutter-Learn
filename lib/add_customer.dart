@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class addCustomer extends StatelessWidget {
   String name = "";
   String phone = "", type = "", address = "";
+  final GlobalKey _formKey = GlobalKey<FormState>();
 
   Widget _phoneTextField() {
     return TextFormField(
@@ -119,6 +120,7 @@ class addCustomer extends StatelessWidget {
         child: Container(
           margin: EdgeInsets.all(10.0),
           child: Form(
+            key: _formKey,
             child: ListView(
               children: [
                 SizedBox(
