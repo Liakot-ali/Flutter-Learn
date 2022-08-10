@@ -16,6 +16,7 @@ class CustomerDetails extends StatefulWidget {
 class _StateCustomerDetails extends State<CustomerDetails> {
   final Value value;
   _StateCustomerDetails(this.value);
+  GlobalKey _formKey = GlobalKey<FormState>();
 
   Widget _nameTextField() {
     return TextFormField(
