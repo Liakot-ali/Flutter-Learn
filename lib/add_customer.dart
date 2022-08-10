@@ -24,6 +24,7 @@ class addCustomer extends StatelessWidget {
         labelText: "Phone",
         hintText: "0123456789",
       ),
+      autovalidate: true,
       onChanged: (String value) {
         if (value.isNotEmpty) {
           phone = value;
