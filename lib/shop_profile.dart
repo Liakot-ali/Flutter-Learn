@@ -59,13 +59,13 @@ class _ShopProfileState extends State<ShopProfile> {
                 Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){ 
                   updateUserProfile();
                 }));
-                ScaffoldMessenger.of(context).showSnackBar(
-                  new SnackBar(
-                    behavior: SnackBarBehavior.floating,
-                    margin: EdgeInsets.only(bottom: 10.0),
-                    content: Text("Under Construction"),
-                  ),
-                );
+                // ScaffoldMessenger.of(context).showSnackBar(
+                //   new SnackBar(
+                //     behavior: SnackBarBehavior.floating,
+                //     margin: EdgeInsets.only(bottom: 10.0),
+                //     content: Text("Under Construction"),
+                //   ),
+                // );
               },
               child: Text("Update Profile"),
             ),
