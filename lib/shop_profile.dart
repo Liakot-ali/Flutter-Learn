@@ -54,6 +54,7 @@ class _ShopProfileState extends State<ShopProfile> {
             _Text("Ladies Fashion", 17.0),
             _Text("Address", 10.0),
             _Text("Parbatipur, Dinajpur", 17.0),
+            SizedBox(height: 10,),
             TextButton(
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){ 
