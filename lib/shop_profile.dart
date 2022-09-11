@@ -1,4 +1,5 @@
 import 'package:easy_transaction/app_bar.dart';
+import 'package:easy_transaction/update_customer_profile.dart';
 import 'package:easy_transaction/widgets/search_icon.dart';
 import 'package:flutter/material.dart';
 
@@ -55,6 +56,7 @@ class _ShopProfileState extends State<ShopProfile> {
             _Text("Parbatipur, Dinajpur", 17.0),
             TextButton(
               onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => updateUserProfile()));
                 // ScaffoldMessenger.of(context).showSnackBar(
                 //   new SnackBar(
                 //     behavior: SnackBarBehavior.floating,
