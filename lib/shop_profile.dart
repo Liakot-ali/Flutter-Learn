@@ -55,13 +55,13 @@ class _ShopProfileState extends State<ShopProfile> {
             _Text("Parbatipur, Dinajpur", 17.0),
             TextButton(
               onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  new SnackBar(
-                    behavior: SnackBarBehavior.floating,
-                    margin: EdgeInsets.only(bottom: 10.0),
-                    content: Text("Under Construction"),
-                  ),
-                );
+                // ScaffoldMessenger.of(context).showSnackBar(
+                //   new SnackBar(
+                //     behavior: SnackBarBehavior.floating,
+                //     margin: EdgeInsets.only(bottom: 10.0),
+                //     content: Text("Under Construction"),
+                //   ),
+                // );
               },
               child: Text("Update Profile"),
             ),
